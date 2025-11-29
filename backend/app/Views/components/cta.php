@@ -4,4 +4,4 @@
     <a href="mailto:info@cocopan.ph">
         <?= view('components/buttons/secondary', ['title' => 'Contact Us']) ?>
     </a>
-  </section>
+</section>

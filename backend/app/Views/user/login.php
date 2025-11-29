@@ -21,7 +21,7 @@
       </div>
     <?php endif; ?>
 
-    <form action="/login/authenticate" method="POST" class="space-y-5">
+    <form action="login/auth" method="POST" class="space-y-5">
 
       <!-- Email -->
       <div>
@@ -44,19 +44,16 @@
       </div>
 
       <!-- Login Button -->
-      <button type="submit"
-              class="w-full bg-purple-500 hover:bg-purple-600 text-black font-semibold py-3 rounded-lg shadow mt-2 transition">
-        Log In
-      </button>
+      <div class="flex justify-center">
+        <?= view('components/buttons/primary_forms', ['title' => 'Log In']) ?>
+      </div>
 
     </form>
 
     <!-- Signup Link -->
     <p class="text-center text-gray-400 mt-6">
       Don't have an account?
-      <a href="/signup" class="text-purple-300 hover:text-purple-200 transition underline">
-        Sign Up
-      </a>
+      <?= view('components/buttons/underlined_link', ['link' => 'register', 'title' => 'Register']) ?>
     </p>
 
   </div>

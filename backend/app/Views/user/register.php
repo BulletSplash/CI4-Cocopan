@@ -21,12 +21,12 @@
       </div>
     <?php endif; ?>
 
-    <form action="/signup/create" method="POST" class="space-y-5">
+    <form action="signup/create" method="POST" class="space-y-5">
 
       <!-- Display Name -->
       <div>
-        <label class="block mb-1 text-gray-300">Display Name</label>
-        <input type="text" name="display_name" required
+        <label class="block mb-1 text-gray-300">Fullname</label>
+        <input type="text" name="full_name" required
                class="w-full px-4 py-3 rounded-lg bg-[#0d0d12] border border-white/10
                       focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none
                       text-gray-200 placeholder-gray-500 transition"
@@ -64,19 +64,17 @@
       </div>
 
       <!-- Signup Button -->
-      <button type="submit"
-              class="w-full bg-purple-500 hover:bg-purple-600 text-black font-semibold py-3 rounded-lg shadow mt-2 transition">
-        Register
-      </button>
+      <div class="flex justify-center">
+        <?= view('components/buttons/primary_forms', ['title' => 'Register']) ?>
+      </div>
+      
 
     </form>
 
     <!-- Login Link -->
     <p class="text-center text-gray-400 mt-6">
       Already have an account?
-      <a href="/login" class="text-purple-300 hover:text-purple-200 transition underline">
-        Log In
-      </a>
+      <?= view('components/buttons/underlined_link', ['link' => 'login', 'title' => 'Log in']) ?>
     </p>
 
   </div>
