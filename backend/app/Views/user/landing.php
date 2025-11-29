@@ -47,9 +47,9 @@
     <p class="text-gray-400 mb-12">Dark. Minimal. Fresh. Always.</p>
 
     <div class="grid gap-8 max-w-6xl mx-auto md:grid-cols-3">
-        <?= view('components/cards/productCard1', ['image' => null, 'title' => "Freshly Baked Bread", 'text' => "Crispy outside, soft inside — baked with love daily."]) ?>
-        <?= view('components/cards/productCard1', ['image' => 'https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80', 'title' => "Signature Coffee", 'text' => "Freshly brewed coffee to energize your day or night"]) ?>
-        <?= view('components/cards/productCard1', ['image' => 'https://images.squarespace-cdn.com/content/v1/670617fd9fdb0f1a8f5fbffe/95cbc784-4f8a-4446-815a-bdba5ad03b94/Glazed+Donut.png', 'title' => "Delicious Pastries", 'text' => "Sweet treats baked daily, perfect with your coffee."]) ?>
+        <?= view('components/cards/productCard1', ['link' => '/products', 'image' => null, 'title' => "Freshly Baked Bread", 'text' => "Crispy outside, soft inside — baked with love daily."]) ?>
+        <?= view('components/cards/productCard1', ['link' => '/products', 'image' => 'https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80', 'title' => "Signature Coffee", 'text' => "Freshly brewed coffee to energize your day or night"]) ?>
+        <?= view('components/cards/productCard1', ['link' => '/products', 'image' => 'https://images.squarespace-cdn.com/content/v1/670617fd9fdb0f1a8f5fbffe/95cbc784-4f8a-4446-815a-bdba5ad03b94/Glazed+Donut.png', 'title' => "Delicious Pastries", 'text' => "Sweet treats baked daily, perfect with your coffee."]) ?>
     </div>
   </section>
 
