@@ -107,21 +107,14 @@ class Auth extends BaseController
         $userModel = new \App\Models\UsersModel();
 
         $data = [
-<<<<<<< HEAD
             'full_name' => $post['full_name'],
-=======
-            'full_name' => $post['first_name'],
->>>>>>> a319a8f56a1e8ec40f8e4749afe3ef879f6ffdfb
             'email' => $post['email'],
             'password_hash' => password_hash($post['password'], PASSWORD_DEFAULT),
             'type' => 'client',
         ];
 
-<<<<<<< HEAD
         $inserted = $userModel->insert($data);
 
-=======
->>>>>>> a319a8f56a1e8ec40f8e4749afe3ef879f6ffdfb
         return redirect()->to('/register');
     }
 }
