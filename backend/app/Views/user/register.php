@@ -1,46 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cocopan | Sign Up</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+<?= view('components/head') ?>
 
 <body class="font-sans bg-[#0a0a0d] text-gray-200">
 
 <!-- Navbar -->
-<?php $session = session(); ?>
-
-<nav id="navbar" 
-     class="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-4 
-            bg-transparent text-gray-200 z-50 transition-all duration-300 backdrop-blur-md">
-
-  <a href="/" class="flex items-center space-x-2 hover:opacity-90 transition">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRheI89iFUg5I_sVIDYpD_Q2HPxPAfNzebhgA&s"
-         alt="Cocopan Logo"
-         class="w-10 h-10 rounded-full object-cover shadow-lg">
-    <h1 class="text-2xl font-bold text-purple-300">Cocopan</h1>
-  </a>
-
-  <div>
-    <a href="/" class="hover:text-purple-300 transition">Home</a>
-  </div>
-
-</nav>
-
-<script>
-  window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.add('bg-[#111129]/90', 'shadow-lg');
-      navbar.classList.remove('bg-transparent');
-    } else {
-      navbar.classList.add('bg-transparent');
-      navbar.classList.remove('bg-[#111129]/90', 'shadow-lg');
-    }
-  });
-</script>
+<?= view('components/header') ?>
 
 <!-- Main Signup Section -->
 <section class="min-h-screen flex items-center justify-center px-6">
@@ -58,12 +21,12 @@
       </div>
     <?php endif; ?>
 
-    <form action="/signup/create" method="POST" class="space-y-5">
+    <form action="signup/create" method="POST" class="space-y-5">
 
       <!-- Display Name -->
       <div>
-        <label class="block mb-1 text-gray-300">Display Name</label>
-        <input type="text" name="display_name" required
+        <label class="block mb-1 text-gray-300">Fullname</label>
+        <input type="text" name="full_name" required
                class="w-full px-4 py-3 rounded-lg bg-[#0d0d12] border border-white/10
                       focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none
                       text-gray-200 placeholder-gray-500 transition"
@@ -101,19 +64,17 @@
       </div>
 
       <!-- Signup Button -->
-      <button type="submit"
-              class="w-full bg-purple-500 hover:bg-purple-600 text-black font-semibold py-3 rounded-lg shadow mt-2 transition">
-        Sign Up
-      </button>
+      <div class="flex justify-center">
+        <?= view('components/buttons/primary_forms', ['title' => 'Register']) ?>
+      </div>
+      
 
     </form>
 
     <!-- Login Link -->
     <p class="text-center text-gray-400 mt-6">
       Already have an account?
-      <a href="/login" class="text-purple-300 hover:text-purple-200 transition underline">
-        Log In
-      </a>
+      <?= view('components/buttons/underlined_link', ['link' => 'login', 'title' => 'Log in']) ?>
     </p>
 
   </div>
@@ -121,17 +82,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-black text-gray-500 text-center py-6 text-sm">
-
-  <a href="/" class="font-semibold text-purple-300 hover:text-purple-200 transition relative
-                    after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
-                    after:bg-purple-400 after:transition-all hover:after:w-full">
-    Home
-  </a>
-
-  | © 2025 Cocopan.
-
-</footer>
+<?= view('components/footer') ?>
 
 </body>
 </html>
