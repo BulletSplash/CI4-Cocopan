@@ -31,7 +31,7 @@
         Log In
       </a>
 
-      <a href="signup" 
+      <a href="register" 
          class="bg-purple-500 hover:bg-purple-600 text-black px-4 py-2 rounded-full font-semibold transition">
         Sign Up
       </a>
