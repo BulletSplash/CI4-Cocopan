@@ -10,3 +10,6 @@ $routes->get('/login', 'Users::login');
 $routes->get('/register', 'Users::register');
 $routes->get('/moodboard', 'Users::moodboard');
 $routes->get('/roadmap', 'Users::roadmap');
+$routes->get('/products', 'Users::products');
+
+$routes->get('/products/(:segment)', 'Users::products/$1');
