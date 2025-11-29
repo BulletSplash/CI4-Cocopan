@@ -1,45 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cocopan | Login</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+<?= view('components/head') ?>
 
 <body class="font-sans bg-[#0a0a0d] text-gray-200">
 
 <!-- Navbar -->
-<?php $session = session(); ?>
-
-<nav id="navbar" 
-     class="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-4 bg-transparent text-gray-200 z-50 transition-all duration-300 backdrop-blur-md">
-
-  <a href="/" class="flex items-center space-x-2 hover:opacity-90 transition">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRheI89iFUg5I_sVIDYpD_Q2HPxPAfNzebhgA&s"
-         alt="Cocopan Logo"
-         class="w-10 h-10 rounded-full object-cover shadow-lg">
-    <h1 class="text-2xl font-bold text-purple-300">Cocopan</h1>
-  </a>
-
-  <div>
-    <a href="/" class="hover:text-purple-300 transition">Home</a>
-  </div>
-
-</nav>
-
-<script>
-  window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.add('bg-[#111129]/90', 'shadow-lg');
-      navbar.classList.remove('bg-transparent');
-    } else {
-      navbar.classList.add('bg-transparent');
-      navbar.classList.remove('bg-[#111129]/90', 'shadow-lg');
-    }
-  });
-</script>
+<?= view('components/header') ?>
 
 <!-- Main Login Section -->
 <section class="min-h-screen flex items-center justify-center px-6">
@@ -100,14 +64,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-black text-gray-500 text-center py-6 text-sm">
-  <a href="/" class="font-semibold text-purple-300 hover:text-purple-200 transition relative
-                    after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
-                    after:bg-purple-400 after:transition-all hover:after:w-full">
-    Home
-  </a>
-  | © 2025 Cocopan.
-</footer>
+<?= view('components/footer') ?>
 
 </body>
 </html>
