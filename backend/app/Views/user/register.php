@@ -1,3 +1,7 @@
+<?php
+$session = session();
+$errors = $session->getFlashdata('errors');
+?>
 <?= view('components/head') ?>
 
 <body class="font-sans bg-[#0a0a0d] text-gray-200">
@@ -15,18 +19,22 @@
       Create an Account
     </h2>
 
-    <?php if (session()->getFlashdata('error')): ?>
-      <div class="text-red-400 text-center mb-4">
-        <?= session()->getFlashdata('error') ?>
-      </div>
-    <?php endif; ?>
+    <?php if (!empty($errors)): ?>
+        <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+          <ul class="list-disc list-inside">
+            <?php foreach ($errors as $error): ?>
+              <li><?= esc($error) ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+        <?php endif; ?>
 
     <form action="/register" method="POST" class="space-y-5">
 
       <!-- Display Name -->
       <div>
         <label class="block mb-1 text-gray-300">Fullname</label>
-        <input type="text" name="full_name" value="<?= esc(old('email')) ?>" required
+        <input type="text" name="full_name" value="<?= esc(old('full_name')) ?>" required
                class="w-full px-4 py-3 rounded-lg bg-[#0d0d12] border border-white/10
                       focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none
                       text-gray-200 placeholder-gray-500 transition"

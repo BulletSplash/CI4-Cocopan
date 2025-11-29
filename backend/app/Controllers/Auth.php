@@ -85,7 +85,7 @@ class Auth extends BaseController
         $request = service('request');
 
         $validation = service('validation');
-        $validation->setRule('full_name', 'Password', 'required|min_length[8]');
+        $validation->setRule('full_name', 'Fullname', 'required|min_length[8]');
         $validation->setRule('email', 'Email', 'required|valid_email');
         $validation->setRule('password', 'Password', 'required|min_length[8]');
 
@@ -100,7 +100,7 @@ class Auth extends BaseController
         if ($post['password'] !== $post['confirm_password'])
         {
             $session->setFlashdata('errors', ['password' => 'Password and Confirm Password not matching']);
-            $session->setFlashdata('old', ['email' => $email]);
+            $session->setFlashdata('old', ['email' => $post['email']]);
             return redirect()->back()->withInput();
         }
 

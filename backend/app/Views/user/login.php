@@ -1,3 +1,8 @@
+<?php
+$session = session();
+$errors = $session->getFlashdata('errors');
+?>
+
 <?= view('components/head') ?>
 
 <body class="font-sans bg-[#0a0a0d] text-gray-200">
@@ -15,11 +20,15 @@
       Welcome Back
     </h2>
 
-    <?php if (session()->getFlashdata('error')): ?>
-      <div class="text-red-400 text-center mb-4">
-        <?= session()->getFlashdata('error') ?>
-      </div>
-    <?php endif; ?>
+    <?php if (!empty($errors)): ?>
+        <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+          <ul class="list-disc list-inside">
+            <?php foreach ($errors as $error): ?>
+              <li><?= esc($error) ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+        <?php endif; ?>
 
     <form action="login/auth" method="POST" class="space-y-5">
 
