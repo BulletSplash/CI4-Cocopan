@@ -1,78 +1,81 @@
-<a name="readme-top"></a>
-
-<br/>
-<br/>
-
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
-  </a>
-<!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+
+<img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/431714668_315266204898858_8539390644264458726_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=kHWXIa7OMegQ7kNvwFcnYha&_nc_oc=AdkN8rV8xp0jF9rA7uRQuHFGH3k6eHLJY8bSLqfpQRRbrYYcJBD5R5dwAoXiKB88fXjbBeJ_D4tOqEgjf7D8MWqN&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=n923256Y81vSGuTv2TYxwg&oh=00_AfiYEKJ1L18UqTL3vhegd35lb9bGCmDG8WFf9CUegQ45UA&oe=6930B899" alt="Litten Group" width="130" height="130">
+
+<h1>Cocopan</h1>
+
+<p><strong>Blending warm café culture with sleek VOID-inspired design.</strong></p>
+
+<p>A web-based café and brand experience platform that highlights Cocopan’s products.<br>
+This project demonstrates a modern UI-driven system with authentication, user profiles, and interactive pages—built for customers, designers, and café enthusiasts.</p>
+
 </div>
 
-<!-- * Description Section -->
-<div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
-</div>
+**Group:** Darkrai
 
-<br/>
+**Team Leader:** Blasco, Lawrence A.
 
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/ci4-template)
-
-<!-- ! Make sure it was similar to your github -->
+**Members:**  
+- Obispo, Allejandro Danyael M.
+- Cardenas, Kyle Angelo A. 
 
 ---
 
-<br/>
-<br/>
-
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#overview">Overview</a>
-      <ol>
-        <li>
-          <a href="#key-components">Key Components</a>
-        </li>
-        <li>
-          <a href="#technology">Technology</a>
-        </li>
-      </ol>
-    </li>
-    <li>
-      <a href="#rules-practices-and-principles">Rules, Practices and Principles</a>
-    </li>
-    <li>
-      <a href="#resources">Resources</a>
-    </li>
-  </ol>
-</details>
+## Table of Contents
+- [Overview](#overview)
+- [Project Features](#project-features)
+- [Key Components](#key-components)
+- [Products & Services](#products--services)
+- [Technology](#technology)
+- [About](#about)
 
 ---
 
-## Overview
+## Overview  
+**Cocopan** is a modern café-inspired digital space where warm hospitality meets futuristic VOID design.
+Blending cozy café aesthetics with sleek neon-infused visuals, Cocopan transforms a simple bakery-and-coffee brand into an immersive interactive experience.
+The platform showcases freshly baked products, curated brand moodboards, development roadmaps, and an evolving user experience ecosystem designed for both customers and creators.
 
-This template provides a **minimal CodeIgniter 4 project layout** with conventions for file organization, commit practices, and simple modules.
+**Purpose:**  
+To build an interactive, visually striking online environment where users can explore Cocopan’s brand identity, engage with its design evolution, and experience a café atmosphere reimagined through a dark, VOID-driven digital lens.  
 
-It is designed to be **easy to start with** and a **reference for adding new features**.
+**Audience:**  
+Café lovers, design enthusiasts, developers, and customers seeking a unique blend of warm bakery culture and futuristic UI design—brought together in one cohesive, immersive online space.
 
-* **Purpose**: a clean starting point for CI4 apps.
-* **Audience**: developers who want a predictable structure and quick onboarding.
+---
 
-### Key Components
+## Project Features
+| Feature | Description |
+|---------|-------------|
+| **User Management (Admin)** | Admins can create, update, and manage customer accounts, including profile details and preferences. |
+| **Product Management** | Admins can manage breads, pastries, coffee blends, merchandise, and other Cocopan items. |
+| **Order Management** | Customers can place and track orders; admins can manage, update, and monitor order statuses. |
 
-These are **sample modules** included (or suggested) for learning how to add features:
+---
 
-| Component                 | Purpose                                                             | Notes                                                   |
-| ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
-| **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
-| **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+## Key Components
+| Component | Purpose | Notes |
+|-----------|---------|-------|
+| Profile Management | Handles admin and customer registration, login, and profile updates. | Demonstrates CRUD logic and user data linking. |
+| Menu & Catalog | Displays featured pastries, drinks, specials, and VOID-themed menu showcases. | Integrates images, descriptions, categories, and tagging. |
+| Products & Services | Lists purchasable items such as baked goods, coffee blends, and Cocopan VOID merchandise. | Demonstrates e-commerce-style CRUD structure. |
+| Admin Dashboard | Allows admins to manage users, menu items, orders, and site content. | Controls backend data, settings, and system oversight. |
 
- <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
+---
+
+## Products & Services  
+
+### **Services**  
+- ☕ **Custom Drink & Pastry Recommendations** – Personalized suggestions based on your taste and mood.  
+- 🌌 **Interactive VOID-Themed Experiences** – Explore immersive digital pages like moodboards, roadmaps, and concept showcases.  
+- 🤝 **Brand & UI Collaboration Sessions** – Work with designers to shape Cocopan’s evolving interface and visual identity.  
+
+### **Products**  
+- 🍞 **Freshly Baked Goods** – Signature breads, pastries, and café favorites.  
+- 🫘 **Specialty Coffee Blends** – OUnique brews crafted for rich flavor and smooth aroma.  
+- 🎁 **Cocopan Merchandise** – VOID-inspired apparel, mugs, stickers, and collectible café items.  
+
+---
 
 ### Technology
 
@@ -87,15 +90,6 @@ These are **sample modules** included (or suggested) for learning how to add fea
 
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge\&logo=tailwindcss\&logoColor=white)
 ![CodeIgniter](https://img.shields.io/badge/CodeIgniter-EF4223?style=for-the-badge\&logo=codeigniter\&logoColor=white)
-
-#### Databases
-
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge\&logo=postgresql\&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge\&logo=firebase\&logoColor=black)
-
-<!-- ! Keep only the used technology -->
 
 ---
 
@@ -225,4 +219,7 @@ AD-ProjectName/
 | Google Photos (Assets)  | Stock imagery and graphics used in UI mockups and documentation.      | [https://photos.google.com](https://photos.google.com)                     |
 | System Documentation    | Internal docs from PHP, MongoDB, and PostgreSQL used in development.  | — (see `/docs` folder in repo)                                             |
 
-<!-- ! Add what tools aided you -->
+
+---
+
+**© 2025 Cocopan – All Rights Reserved**
