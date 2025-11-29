@@ -21,12 +21,12 @@
       </div>
     <?php endif; ?>
 
-    <form action="signup/create" method="POST" class="space-y-5">
+    <form action="/register" method="POST" class="space-y-5">
 
       <!-- Display Name -->
       <div>
         <label class="block mb-1 text-gray-300">Fullname</label>
-        <input type="text" name="full_name" required
+        <input type="text" name="full_name" value="<?= esc(old('email')) ?>" required
                class="w-full px-4 py-3 rounded-lg bg-[#0d0d12] border border-white/10
                       focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none
                       text-gray-200 placeholder-gray-500 transition"
@@ -36,7 +36,7 @@
       <!-- Email -->
       <div>
         <label class="block mb-1 text-gray-300">Email</label>
-        <input type="email" name="email" required
+        <input type="email" name="email" value="<?= esc(old('email')) ?>" required
                class="w-full px-4 py-3 rounded-lg bg-[#0d0d12] border border-white/10
                       focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none
                       text-gray-200 placeholder-gray-500 transition"
@@ -67,8 +67,6 @@
       <div class="flex justify-center">
         <?= view('components/buttons/primary_forms', ['title' => 'Register']) ?>
       </div>
-      
-
     </form>
 
     <!-- Login Link -->

@@ -26,21 +26,21 @@
       <!-- Email -->
       <div>
         <label class="block mb-1 text-gray-300">Email</label>
-        <input type="email" name="email" required
-               class="w-full px-4 py-3 rounded-lg bg-[#0d0d12] border border-white/10
+        <input type="email" name="email" value="<?= esc(old('email')) ?>" required
+              class="w-full px-4 py-3 rounded-lg bg-[#0d0d12] border border-white/10
                       focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none
                       text-gray-200 placeholder-gray-500 transition"
-               placeholder="Enter your email">
+              placeholder="Enter your email">
       </div>
 
       <!-- Password -->
       <div>
         <label class="block mb-1 text-gray-300">Password</label>
         <input type="password" name="password" required
-               class="w-full px-4 py-3 rounded-lg bg-[#0d0d12] border border-white/10
+              class="w-full px-4 py-3 rounded-lg bg-[#0d0d12] border border-white/10
                       focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none
                       text-gray-200 placeholder-gray-500 transition"
-               placeholder="Enter your password">
+              placeholder="Enter your password">
       </div>
 
       <!-- Login Button -->
