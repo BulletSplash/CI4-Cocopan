@@ -31,4 +31,17 @@ class Users extends BaseController
     {
         return view('user/roadmap');
     }
+
+    public function products($name = null)
+    {
+        if (!$name)
+        {
+            return view('user/products');
+        }
+        else
+        {
+            return view('user/products/'.$name);
+        }
+            
+    }
 }
